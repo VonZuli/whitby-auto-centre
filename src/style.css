@@ -1,0 +1,115 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+}
+
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  
+}
+
+header {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 0.5fr;
+  min-height: 200px;
+  gap: 20px;
+  box-shadow: 2px 2px 30px 10px lightgrey;
+}
+nav{
+  display: grid;
+  grid-template: 1fr /1fr 1fr 1fr;
+  font-size: 1.6rem;
+}
+nav > a{
+  text-decoration: none;
+  color: red;
+  align-self: center;
+}
+main{
+  display: grid;
+  grid-template: 1fr/repeat(3, 1fr);
+}
+.logo-group {
+  grid-area: 1/1/3/2;
+  display: grid;
+  grid-template: 1fr 1fr / min-content;
+  align-self: center;
+}
+
+.logo {
+  max-width: 250px;
+  grid-area: 1/1/3/2;
+}
+.header-title {
+  grid-area: 1/2/2/3;
+  align-self: flex-end;
+}
+.subtitle {
+  grid-area: 2/2/3/3;
+  color: red;
+}
+.contact-group {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 0.4fr 1fr;
+  max-width: 400px;
+  align-self: center;
+}
+
+.book-appointment-btn {
+  display: flex;
+  grid-area: 1/1/3/2;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  max-width: fit-content;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+.book-appointment-btn > div > img {
+  max-width: 30px;
+  filter: invert();
+}
+.business-info {
+  max-width: fit-content;
+  justify-self: left;
+}
+
+.hours {
+  grid-area: 1/2/2/3;
+  /* align-self:flex-end; */
+  font-size: 1.2rem;
+  text-decoration: underline 1px dotted ;
+}
+.directions {
+  grid-area: 1/3/2/4;
+  /* align-self: flex-end; */
+  font-size: 1.2rem;
+  text-decoration: underline 1px dotted ;
+}
+.phone-number {
+  grid-area: 2/2/3/4;
+  justify-self: left;
+  font-size: 1.7rem;
+  color:red;
+}
+
+.banner{
+  background-color: black;
+  height: 350px;
+  grid-column: span 3;
+}
+.content{
+  
+}
