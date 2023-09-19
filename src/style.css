@@ -153,6 +153,7 @@ main {
   padding: 0;
   grid-template: repeat(5, 1fr) / 1fr 1fr;
   max-width: fit-content;
+  max-height: 20px;
   gap: 5px;
 }
 .services > ul > li {
@@ -160,7 +161,7 @@ main {
   list-style: none;
   font-weight: 500;
 }
-.services_btn{
+.services_btn {
   background-color: transparent;
   max-width: fit-content;
   border: transparent;
@@ -182,17 +183,18 @@ main {
   font-size: 15px;
 } */
 
-.active, .services_btn:hover {
-  /* background-color: #555; */
-}
+/* .active, .services_btn:hover {
+  background-color: red;
+  border-radius: 50px;
+  border: 2px solid black;
+} */
 
-.services-content {
+.services-details {
   padding: 0 18px;
+  grid-column: span 2;
   display: none;
-  overflow: hidden;
   background-color: #f1f1f1;
 }
-
 
 .slider {
   display: grid;
@@ -287,6 +289,7 @@ main {
 footer {
   display: grid;
   position: sticky;
+  /* display: none; */
   background-color: red;
   grid-template: 1fr/3fr 1fr;
   padding: 5px;
@@ -308,8 +311,6 @@ footer > a:hover {
   justify-self: flex-end;
   align-self: center;
 }
-
-
 
 @media screen {
 }

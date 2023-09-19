@@ -47,13 +47,17 @@ paginationElement.addEventListener("click", function (e) {
   }
 });
 
-let servicesBtn = document.getElementsByClassName(".services_btn")
+const collapsible = function (e) {
+  let content = this.nextElementSibling;
+
+  content.style.display === "block"
+    ? (content.style.display = "none")
+    : (content.style.display = "block");
+};
+//remove active class when new button is clicked
+//
+let servicesBtn = document.querySelectorAll(".services_btn");
 for (let i = 0; i < servicesBtn.length; i++) {
-  servicesBtn[i].addEventListener("click", function() {
-    console.log("click");
-    this.classList.toggle("active");
-    let content = servicesBtn.nextElementSibling;
-    content.style.display === "block" ? content.style.display ="none": content.style.display = "block"
-  })
-  
+  servicesBtn[i].addEventListener("click", collapsible);
+  servicesBtn[i].setAttribute("data-service", i);
 }
