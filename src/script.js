@@ -49,13 +49,11 @@ paginationElement.addEventListener("click", function (e) {
 
 const collapsible = function (e) {
   let content = this.nextElementSibling;
-
   content.style.display === "block"
     ? (content.style.display = "none")
     : (content.style.display = "block");
 };
-//remove active class when new button is clicked
-//
+
 let servicesBtn = document.querySelectorAll(".services_btn");
 for (let i = 0; i < servicesBtn.length; i++) {
   servicesBtn[i].addEventListener("click", collapsible);

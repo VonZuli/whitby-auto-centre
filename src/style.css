@@ -116,7 +116,9 @@ nav > a:hover {
 main {
   display: grid;
   min-height: calc(100vh - 50px);
+  /* height: 100vh; */
   grid-template: 1fr / repeat(3, 1fr);
+  box-shadow: 2px 2px 30px 10px lightgrey;
 }
 .banner {
   background-color: black;
@@ -128,6 +130,7 @@ main {
   gap: 20px;
   grid-column: span 3;
   padding: 0 5px 0 5px;
+  /* height: 100vh; */
 }
 .about {
   grid-area: 1/1/2/4;
@@ -142,29 +145,33 @@ main {
   color: red;
 }
 .services {
+  display: grid;
+  grid-template: repeat(5, 1fr) / minmax(170px,170px) 1fr;
   grid-area: 3/1/4/4;
   padding-bottom: 20px;
+  gap: 10px;
 }
 .services > h2 {
+  grid-column: span 2;
   color: red;
 }
-.services > ul {
-  display: grid;
-  padding: 0;
-  grid-template: repeat(5, 1fr) / 1fr 1fr;
+
+.services > h4 {
   max-width: fit-content;
   max-height: 20px;
-  gap: 5px;
 }
-.services > ul > li {
+
+.services > h4{
   color: red;
   list-style: none;
   font-weight: 500;
 }
+
 .services_btn {
   background-color: transparent;
   max-width: fit-content;
   border: transparent;
+  max-height: 20px;
 }
 .services_btn > img {
   max-height: 20px;
@@ -209,6 +216,7 @@ main {
   display: block;
 }
 .slider_slides-cont {
+  /* grid-area: 1/2/2/3; */
   grid-area: 1/1/2/4;
 }
 .slider_slide > img {
@@ -288,12 +296,13 @@ main {
 
 footer {
   display: grid;
-  position: sticky;
+  /* position: sticky; */
   /* display: none; */
   background-color: red;
   grid-template: 1fr/3fr 1fr;
   padding: 5px;
   height: 50px;
+  box-shadow: 2px 2px 30px 10px lightgrey;
 }
 footer > p {
   color: white;
@@ -312,5 +321,28 @@ footer > a:hover {
   align-self: center;
 }
 
-@media screen {
+@media only screen and (min-width: 768px) {
+  body{
+    width: 60%;
+  }
+  header{
+    grid-template: 1fr/1fr;
+  }
+  .logo-group{
+    grid-area: 1/1/2/2;
+  }
+  .header-title{
+    align-self: center;
+  }
+  .contact-group{
+    grid-area: 1/2/2/3;
+  }
+  .nav-links{
+    grid-area: 2/2/3/3;
+  }  
+
+  .slider_slides-cont {
+    grid-area: 1/2/2/3;
+    justify-self: center;
+  }
 }
